@@ -1,0 +1,1191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="EI_BD_POO">
+  <ClassDiagramComponents>
+    <Class name="Conexion" package="Controlador" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="conexion" type="Connection" visibility="private" isStatic="true"/>
+        <Field name="instancia" type="Conexion" visibility="private" isStatic="true"/>
+        <Field name="URL" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="USERNAME" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="PASSWORD" type="String" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getInstance" returnType="Conexion" visibility="public" isStatic="true"/>
+        <Method name="conectar" returnType="Connection" visibility="public"/>
+        <Method name="cerrarConexion" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="EmpleadoControlador" package="Controlador" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="conexion" type="Conexion" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="obtenerEmpleados" returnType="List&lt;Empleados&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="EI_BD_POO" package="ei_bd_poo" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Clientes" package="Modelo" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="idClie" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="paterno" type="String" visibility="private"/>
+        <Field name="materno" type="String" visibility="private"/>
+        <Field name="correo" type="String" visibility="private"/>
+        <Field name="telefono" type="String" visibility="private"/>
+        <Field name="feNac" type="Date" visibility="private"/>
+        <Field name="feRegi" type="Date" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getIdClie" returnType="int" visibility="public"/>
+        <Method name="setIdClie" returnType="void" visibility="public">
+          <Argument type="int" name="idClie"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getPaterno" returnType="String" visibility="public"/>
+        <Method name="setPaterno" returnType="void" visibility="public">
+          <Argument type="String" name="paterno"/>
+        </Method>
+        <Method name="getMaterno" returnType="String" visibility="public"/>
+        <Method name="setMaterno" returnType="void" visibility="public">
+          <Argument type="String" name="materno"/>
+        </Method>
+        <Method name="getCorreo" returnType="String" visibility="public"/>
+        <Method name="setCorreo" returnType="void" visibility="public">
+          <Argument type="String" name="correo"/>
+        </Method>
+        <Method name="getTelefono" returnType="String" visibility="public"/>
+        <Method name="setTelefono" returnType="void" visibility="public">
+          <Argument type="String" name="telefono"/>
+        </Method>
+        <Method name="getFeNac" returnType="Date" visibility="public"/>
+        <Method name="setFeNac" returnType="void" visibility="public">
+          <Argument type="Date" name="feNac"/>
+        </Method>
+        <Method name="getFeRegi" returnType="Date" visibility="public"/>
+        <Method name="setFeRegi" returnType="void" visibility="public">
+          <Argument type="Date" name="feRegi"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DetallePedidos" package="Modelo" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="idDetPed" type="int" visibility="private"/>
+        <Field name="idPedido" type="int" visibility="private"/>
+        <Field name="idPro" type="int" visibility="private"/>
+        <Field name="cantidad" type="int" visibility="private"/>
+        <Field name="precio" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getIdDetPed" returnType="int" visibility="public"/>
+        <Method name="setIdDetPed" returnType="void" visibility="public">
+          <Argument type="int" name="idDetPed"/>
+        </Method>
+        <Method name="getIdPedido" returnType="int" visibility="public"/>
+        <Method name="setIdPedido" returnType="void" visibility="public">
+          <Argument type="int" name="idPedido"/>
+        </Method>
+        <Method name="getIdPro" returnType="int" visibility="public"/>
+        <Method name="setIdPro" returnType="void" visibility="public">
+          <Argument type="int" name="idPro"/>
+        </Method>
+        <Method name="getCantidad" returnType="int" visibility="public"/>
+        <Method name="setCantidad" returnType="void" visibility="public">
+          <Argument type="int" name="cantidad"/>
+        </Method>
+        <Method name="getPrecio" returnType="String" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="String" name="precio"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DetalleVentas" package="Modelo" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="idDet" type="int" visibility="private"/>
+        <Field name="idVen" type="int" visibility="private"/>
+        <Field name="idPro" type="int" visibility="private"/>
+        <Field name="cantidad" type="int" visibility="private"/>
+        <Field name="subtotal" type="float" visibility="private"/>
+        <Field name="iva" type="float" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getIdDet" returnType="int" visibility="public"/>
+        <Method name="setIdDet" returnType="void" visibility="public">
+          <Argument type="int" name="idDet"/>
+        </Method>
+        <Method name="getIdVen" returnType="int" visibility="public"/>
+        <Method name="setIdVen" returnType="void" visibility="public">
+          <Argument type="int" name="idVen"/>
+        </Method>
+        <Method name="getIdPro" returnType="int" visibility="public"/>
+        <Method name="setIdPro" returnType="void" visibility="public">
+          <Argument type="int" name="idPro"/>
+        </Method>
+        <Method name="getCantidad" returnType="int" visibility="public"/>
+        <Method name="setCantidad" returnType="void" visibility="public">
+          <Argument type="int" name="cantidad"/>
+        </Method>
+        <Method name="getSubtotal" returnType="float" visibility="public"/>
+        <Method name="setSubtotal" returnType="void" visibility="public">
+          <Argument type="float" name="subtotal"/>
+        </Method>
+        <Method name="getIva" returnType="float" visibility="public"/>
+        <Method name="setIva" returnType="void" visibility="public">
+          <Argument type="float" name="iva"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Empleados" package="Modelo" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="idEmp" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="pater" type="String" visibility="private"/>
+        <Field name="mater" type="String" visibility="private"/>
+        <Field name="feNac" type="Date" visibility="private"/>
+        <Field name="direccion" type="String" visibility="private"/>
+        <Field name="telefono" type="String" visibility="private"/>
+        <Field name="feContratacion" type="Date" visibility="private"/>
+        <Field name="salario" type="float" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getIdEmp" returnType="int" visibility="public"/>
+        <Method name="setIdEmp" returnType="void" visibility="public">
+          <Argument type="int" name="idEmp"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getPater" returnType="String" visibility="public"/>
+        <Method name="setPater" returnType="void" visibility="public">
+          <Argument type="String" name="pater"/>
+        </Method>
+        <Method name="getMater" returnType="String" visibility="public"/>
+        <Method name="setMater" returnType="void" visibility="public">
+          <Argument type="String" name="mater"/>
+        </Method>
+        <Method name="getFeNac" returnType="Date" visibility="public"/>
+        <Method name="setFeNac" returnType="void" visibility="public">
+          <Argument type="Date" name="feNac"/>
+        </Method>
+        <Method name="getDireccion" returnType="String" visibility="public"/>
+        <Method name="setDireccion" returnType="void" visibility="public">
+          <Argument type="String" name="direccion"/>
+        </Method>
+        <Method name="getTelefono" returnType="String" visibility="public"/>
+        <Method name="setTelefono" returnType="void" visibility="public">
+          <Argument type="String" name="telefono"/>
+        </Method>
+        <Method name="getFeContratacion" returnType="Date" visibility="public"/>
+        <Method name="setFeContratacion" returnType="void" visibility="public">
+          <Argument type="Date" name="feContratacion"/>
+        </Method>
+        <Method name="getSalario" returnType="float" visibility="public"/>
+        <Method name="setSalario" returnType="void" visibility="public">
+          <Argument type="float" name="salario"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Inventarios" package="Modelo" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="idInv" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="desc" type="String" visibility="private"/>
+        <Field name="cat" type="String" visibility="private"/>
+        <Field name="stock" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getIdInv" returnType="int" visibility="public"/>
+        <Method name="setIdInv" returnType="void" visibility="public">
+          <Argument type="int" name="idInv"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getDesc" returnType="String" visibility="public"/>
+        <Method name="setDesc" returnType="void" visibility="public">
+          <Argument type="String" name="desc"/>
+        </Method>
+        <Method name="getCat" returnType="String" visibility="public"/>
+        <Method name="setCat" returnType="void" visibility="public">
+          <Argument type="String" name="cat"/>
+        </Method>
+        <Method name="getStock" returnType="int" visibility="public"/>
+        <Method name="setStock" returnType="void" visibility="public">
+          <Argument type="int" name="stock"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Pedidos" package="Modelo" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="idPedido" type="int" visibility="private"/>
+        <Field name="fePedido" type="Date" visibility="private"/>
+        <Field name="feRec" type="Date" visibility="private"/>
+        <Field name="estado" type="String" visibility="private"/>
+        <Field name="idProve" type="int" visibility="private"/>
+        <Field name="total" type="float" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getIdPedido" returnType="int" visibility="public"/>
+        <Method name="setIdPedido" returnType="void" visibility="public">
+          <Argument type="int" name="idPedido"/>
+        </Method>
+        <Method name="getFePedido" returnType="Date" visibility="public"/>
+        <Method name="setFePedido" returnType="void" visibility="public">
+          <Argument type="Date" name="fePedido"/>
+        </Method>
+        <Method name="getFeRec" returnType="Date" visibility="public"/>
+        <Method name="setFeRec" returnType="void" visibility="public">
+          <Argument type="Date" name="feRec"/>
+        </Method>
+        <Method name="getEstado" returnType="String" visibility="public"/>
+        <Method name="setEstado" returnType="void" visibility="public">
+          <Argument type="String" name="estado"/>
+        </Method>
+        <Method name="getIdProve" returnType="int" visibility="public"/>
+        <Method name="setIdProve" returnType="void" visibility="public">
+          <Argument type="int" name="idProve"/>
+        </Method>
+        <Method name="getTotal" returnType="float" visibility="public"/>
+        <Method name="setTotal" returnType="void" visibility="public">
+          <Argument type="float" name="total"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Productos" package="Modelo" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="idPro" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="descripcion" type="String" visibility="private"/>
+        <Field name="categoria" type="String" visibility="private"/>
+        <Field name="precio" type="String" visibility="private"/>
+        <Field name="disponible" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getIdPro" returnType="int" visibility="public"/>
+        <Method name="setIdPro" returnType="void" visibility="public">
+          <Argument type="int" name="idPro"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getDescripcion" returnType="String" visibility="public"/>
+        <Method name="setDescripcion" returnType="void" visibility="public">
+          <Argument type="String" name="descripcion"/>
+        </Method>
+        <Method name="getCategoria" returnType="String" visibility="public"/>
+        <Method name="setCategoria" returnType="void" visibility="public">
+          <Argument type="String" name="categoria"/>
+        </Method>
+        <Method name="getPrecio" returnType="String" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="String" name="precio"/>
+        </Method>
+        <Method name="getDisponible" returnType="int" visibility="public"/>
+        <Method name="setDisponible" returnType="void" visibility="public">
+          <Argument type="int" name="disponible"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Proovedores" package="Modelo" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields>
+        <Field name="idProve" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="telefono" type="String" visibility="private"/>
+        <Field name="direccion" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getIdProve" returnType="int" visibility="public"/>
+        <Method name="setIdProve" returnType="void" visibility="public">
+          <Argument type="int" name="idProve"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getTelefono" returnType="String" visibility="public"/>
+        <Method name="setTelefono" returnType="void" visibility="public">
+          <Argument type="String" name="telefono"/>
+        </Method>
+        <Method name="getDireccion" returnType="String" visibility="public"/>
+        <Method name="setDireccion" returnType="void" visibility="public">
+          <Argument type="String" name="direccion"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Ventas" package="Modelo" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields>
+        <Field name="idVen" type="int" visibility="private"/>
+        <Field name="idClie" type="int" visibility="private"/>
+        <Field name="idEmp" type="int" visibility="private"/>
+        <Field name="feVen" type="Date" visibility="private"/>
+        <Field name="total" type="float" visibility="private"/>
+        <Field name="metodo" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getIdVen" returnType="int" visibility="public"/>
+        <Method name="setIdVen" returnType="void" visibility="public">
+          <Argument type="int" name="idVen"/>
+        </Method>
+        <Method name="getIdClie" returnType="int" visibility="public"/>
+        <Method name="setIdClie" returnType="void" visibility="public">
+          <Argument type="int" name="idClie"/>
+        </Method>
+        <Method name="getIdEmp" returnType="int" visibility="public"/>
+        <Method name="setIdEmp" returnType="void" visibility="public">
+          <Argument type="int" name="idEmp"/>
+        </Method>
+        <Method name="getFeVen" returnType="Date" visibility="public"/>
+        <Method name="setFeVen" returnType="void" visibility="public">
+          <Argument type="Date" name="feVen"/>
+        </Method>
+        <Method name="getTotal" returnType="float" visibility="public"/>
+        <Method name="setTotal" returnType="void" visibility="public">
+          <Argument type="float" name="total"/>
+        </Method>
+        <Method name="getMetodo" returnType="String" visibility="public"/>
+        <Method name="setMetodo" returnType="void" visibility="public">
+          <Argument type="String" name="metodo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BusClien" package="Vistas" visibility="public" xPosition="1220.0" yPosition="420.0">
+      <Fields>
+        <Field name="modelo" type="DefaultTableModel" visibility="private"/>
+        <Field name="conexion" type="Conexion" visibility="private"/>
+        <Field name="Apellidos3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="ComboBus" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="Nombres" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="buscar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jtDatos" type="javax.swing.JTable" visibility="private"/>
+        <Field name="limpiar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="regresar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="tfnom" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="cargarTodosLosDatos" returnType="void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="tfnomActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tfnomKeyTyped" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="buscarPorNombre" returnType="void" visibility="private">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="buscarPorApellidoPaterno" returnType="void" visibility="private">
+          <Argument type="String" name="paterno"/>
+        </Method>
+        <Method name="buscarPorTelefono" returnType="void" visibility="private">
+          <Argument type="String" name="telefono"/>
+        </Method>
+        <Method name="buscarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="buscarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="limpiarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="limpiarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="regresarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="regresarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BusEm" package="Vistas" visibility="public" xPosition="1520.0" yPosition="420.0">
+      <Fields>
+        <Field name="modelo" type="DefaultTableModel" visibility="private"/>
+        <Field name="conexion" type="Conexion" visibility="private"/>
+        <Field name="Apellidos3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="ComboBus" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="Nombres" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="buscar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jtDatos" type="javax.swing.JTable" visibility="private"/>
+        <Field name="limpiar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="regresar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="tfnom" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="cargarTodosLosDatos" returnType="void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="tfnomActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tfnomKeyTyped" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="buscarPorNombre" returnType="void" visibility="private">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="buscarPorApellidoPaterno" returnType="void" visibility="private">
+          <Argument type="String" name="paterno"/>
+        </Method>
+        <Method name="buscarPorTelefono" returnType="void" visibility="private">
+          <Argument type="String" name="telefono"/>
+        </Method>
+        <Method name="buscarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="buscarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="limpiarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="limpiarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="regresarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="regresarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BusInven" package="Vistas" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields>
+        <Field name="modelo" type="DefaultTableModel" visibility="private"/>
+        <Field name="conexion" type="Conexion" visibility="private"/>
+        <Field name="Apellidos3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="ComboBus" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="Nombres" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="buscar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jtDatos" type="javax.swing.JTable" visibility="private"/>
+        <Field name="limpiar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="regresar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="tfnom" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="cargarTodosLosDatos" returnType="void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="tfnomActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tfnomKeyTyped" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="buscarPorNombre" returnType="void" visibility="private">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="buscarPorDescripcion" returnType="void" visibility="private">
+          <Argument type="String" name="descripcion"/>
+        </Method>
+        <Method name="buscarPorCategoria" returnType="void" visibility="private">
+          <Argument type="String" name="categoria"/>
+        </Method>
+        <Method name="buscarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="buscarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="limpiarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="limpiarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="regresarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="regresarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BusProduc" package="Vistas" visibility="public" xPosition="2120.0" yPosition="420.0">
+      <Fields>
+        <Field name="modelo" type="DefaultTableModel" visibility="private"/>
+        <Field name="conexion" type="Conexion" visibility="private"/>
+        <Field name="Apellidos3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="ComboBus" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="Nombres" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="buscar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jtDatos" type="javax.swing.JTable" visibility="private"/>
+        <Field name="limpiar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="regresar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="tfnom" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="cargarTodosLosDatos" returnType="void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="tfnomActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tfnomKeyTyped" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="buscarPorNombre" returnType="void" visibility="private">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="buscarPorDescripcion" returnType="void" visibility="private">
+          <Argument type="String" name="descripcion"/>
+        </Method>
+        <Method name="buscarPorCategoria" returnType="void" visibility="private">
+          <Argument type="String" name="categoria"/>
+        </Method>
+        <Method name="buscarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="buscarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="limpiarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="limpiarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="regresarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="regresarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="InCliente" package="Vistas" visibility="public" xPosition="20.0" yPosition="820.0">
+      <Fields>
+        <Field name="modelo" type="DefaultTableModel" visibility="package"/>
+        <Field name="conectar" type="Conexion" visibility="package"/>
+        <Field name="conexion" type="Connection" visibility="package"/>
+        <Field name="REGRESAR" type="javax.swing.JButton" visibility="private"/>
+        <Field name="agregar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="apeM" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="apeP" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="correo" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="eliminar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="fNac" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="freg" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jtDatos" type="javax.swing.JTable" visibility="private"/>
+        <Field name="modificar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="nom" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="tel" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="mostrarDatos" returnType="void" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="agregarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="REGRESARMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="eliminarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="modificarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jButton1MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="InEmpleado" package="Vistas" visibility="public" xPosition="320.0" yPosition="820.0">
+      <Fields>
+        <Field name="modelo" type="DefaultTableModel" visibility="package"/>
+        <Field name="conectar" type="Conexion" visibility="package"/>
+        <Field name="conexion" type="Connection" visibility="package"/>
+        <Field name="REGRESAR" type="javax.swing.JButton" visibility="private"/>
+        <Field name="agregar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="apeM" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="apeP" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="direc" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="eliminar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="fNac" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="feCont" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jtDatos" type="javax.swing.JTable" visibility="private"/>
+        <Field name="modificar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="nom" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="salar" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="tel" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="mostrarDatos" returnType="void" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="agregarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="REGRESARMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="eliminarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="modificarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jButton1MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="eliminarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="InInven" package="Vistas" visibility="public" xPosition="620.0" yPosition="820.0">
+      <Fields>
+        <Field name="modelo" type="DefaultTableModel" visibility="package"/>
+        <Field name="conectar" type="Conexion" visibility="package"/>
+        <Field name="conexion" type="Connection" visibility="package"/>
+        <Field name="REGRESAR" type="javax.swing.JButton" visibility="private"/>
+        <Field name="agregar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="cate" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="des" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="eliminar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jtDatos" type="javax.swing.JTable" visibility="private"/>
+        <Field name="modificar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="nom" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="stock" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="mostrarDatos" returnType="void" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="agregarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="REGRESARMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="eliminarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="modificarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jButton1MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="InProduc" package="Vistas" visibility="public" xPosition="920.0" yPosition="820.0">
+      <Fields>
+        <Field name="modelo" type="DefaultTableModel" visibility="package"/>
+        <Field name="conectar" type="Conexion" visibility="package"/>
+        <Field name="conexion" type="Connection" visibility="package"/>
+        <Field name="REGRESAR" type="javax.swing.JButton" visibility="private"/>
+        <Field name="agregar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="cate" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="des" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="dispo" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="eliminar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jtDatos" type="javax.swing.JTable" visibility="private"/>
+        <Field name="modificar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="nom" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="pre" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="mostrarDatos" returnType="void" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="agregarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="REGRESARMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="eliminarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="modificarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jButton1MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="InProve" package="Vistas" visibility="public" xPosition="1220.0" yPosition="820.0">
+      <Fields>
+        <Field name="modelo" type="DefaultTableModel" visibility="package"/>
+        <Field name="conectar" type="Conexion" visibility="package"/>
+        <Field name="conexion" type="Connection" visibility="package"/>
+        <Field name="REGRESAR" type="javax.swing.JButton" visibility="private"/>
+        <Field name="agregar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="direc" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="eliminar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jtDatos" type="javax.swing.JTable" visibility="private"/>
+        <Field name="modificar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="nom" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="tel" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="mostrarDatos" returnType="void" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="agregarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="REGRESARMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="eliminarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="modificarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Menu" package="Vistas" visibility="public" xPosition="1520.0" yPosition="820.0">
+      <Fields>
+        <Field name="AgrClien" type="javax.swing.JButton" visibility="private"/>
+        <Field name="AgrEmple" type="javax.swing.JButton" visibility="private"/>
+        <Field name="AgrInven" type="javax.swing.JButton" visibility="private"/>
+        <Field name="AgrPro" type="javax.swing.JButton" visibility="private"/>
+        <Field name="AgrProove" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton6" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton7" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton8" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="AgrEmpleMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="AgrClienMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="AgrProMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="AgrInvenMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="AgrProoveMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MoClien" package="Vistas" visibility="public" xPosition="1820.0" yPosition="820.0">
+      <Fields>
+        <Field name="codigoContacto" type="int" visibility="private"/>
+        <Field name="conectar" type="Conexion" visibility="package"/>
+        <Field name="conexion" type="Connection" visibility="package"/>
+        <Field name="REGRESAR" type="javax.swing.JButton" visibility="private"/>
+        <Field name="agregar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="apeM" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="apeP" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="codi" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="correo" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="fNac" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="freg" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="nom" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="tel" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="cod"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="cargarDatosContacto" returnType="void" visibility="private">
+          <Argument type="int" name="cod"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="agregarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="REGRESARMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="agregarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="fNacActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="apePActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MoEmp" package="Vistas" visibility="public" xPosition="2120.0" yPosition="820.0">
+      <Fields>
+        <Field name="codigoContacto" type="int" visibility="private"/>
+        <Field name="conectar" type="Conexion" visibility="package"/>
+        <Field name="conexion" type="Connection" visibility="package"/>
+        <Field name="REGRESAR" type="javax.swing.JButton" visibility="private"/>
+        <Field name="agregar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="apeM" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="apeP" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="codi" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="direc" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="fNac" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="feCont" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="nom" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="salar" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="tel" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="cod"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="cargarDatosContacto" returnType="void" visibility="private">
+          <Argument type="int" name="cod"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="agregarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="REGRESARMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="agregarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="telActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="apePActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MoInventario" package="Vistas" visibility="public" xPosition="20.0" yPosition="1220.0">
+      <Fields>
+        <Field name="codigoContacto" type="int" visibility="private"/>
+        <Field name="conectar" type="Conexion" visibility="package"/>
+        <Field name="conexion" type="Connection" visibility="package"/>
+        <Field name="REGRESAR" type="javax.swing.JButton" visibility="private"/>
+        <Field name="agregar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="cate" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="codi" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="des" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="nom" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="stock" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="cod"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="cargarDatosContacto" returnType="void" visibility="private">
+          <Argument type="int" name="cod"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="agregarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="REGRESARMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="agregarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="desActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MoProduc" package="Vistas" visibility="public" xPosition="320.0" yPosition="1220.0">
+      <Fields>
+        <Field name="codigoContacto" type="int" visibility="private"/>
+        <Field name="conectar" type="Conexion" visibility="package"/>
+        <Field name="conexion" type="Connection" visibility="package"/>
+        <Field name="REGRESAR" type="javax.swing.JButton" visibility="private"/>
+        <Field name="agregar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="cate" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="codi" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="des" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="dispo" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="nom" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="pre" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="cod"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="cargarDatosContacto" returnType="void" visibility="private">
+          <Argument type="int" name="cod"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="agregarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="REGRESARMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="agregarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="desActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MoProve" package="Vistas" visibility="public" xPosition="620.0" yPosition="1220.0">
+      <Fields>
+        <Field name="codigoContacto" type="int" visibility="private"/>
+        <Field name="conectar" type="Conexion" visibility="package"/>
+        <Field name="conexion" type="Connection" visibility="package"/>
+        <Field name="REGRESAR" type="javax.swing.JButton" visibility="private"/>
+        <Field name="agregar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="codi" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="direc" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="nom" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="tel" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="cod"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="cargarDatosContacto" returnType="void" visibility="private">
+          <Argument type="int" name="cod"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="agregarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="REGRESARMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="agregarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="telActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="instancia" source="Controlador.Conexion" target="Controlador.Conexion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="conectar" source="Vistas.MoInventario" target="Controlador.Conexion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="conectar" source="Vistas.MoProve" target="Controlador.Conexion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="conexion" source="Vistas.BusProduc" target="Controlador.Conexion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="conectar" source="Vistas.MoProduc" target="Controlador.Conexion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Controlador.EmpleadoControlador" target="Modelo.Empleados" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="conexion" source="Vistas.BusEm" target="Controlador.Conexion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="conexion" source="Vistas.BusInven" target="Controlador.Conexion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="conectar" source="Vistas.InEmpleado" target="Controlador.Conexion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="conexion" source="Vistas.BusClien" target="Controlador.Conexion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="conexion" source="Controlador.EmpleadoControlador" target="Controlador.Conexion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="conectar" source="Vistas.InProve" target="Controlador.Conexion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="conectar" source="Vistas.MoClien" target="Controlador.Conexion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Controlador.Conexion" target="Controlador.Conexion" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="conectar" source="Vistas.InInven" target="Controlador.Conexion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="conectar" source="Vistas.InCliente" target="Controlador.Conexion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="conectar" source="Vistas.MoEmp" target="Controlador.Conexion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="conectar" source="Vistas.InProduc" target="Controlador.Conexion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
